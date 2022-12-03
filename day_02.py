@@ -1,3 +1,5 @@
+from aoc_utility import get_puzzle_input
+
 
 ROCK, PAPER, SCISSOR = 1, 2, 3
 WIN, DRAW, LOOSE = 6, 3, 0
@@ -39,9 +41,8 @@ def evaluate_match(strat: tuple[str], is_outcome=False) -> int:
 
 
 def main():
-    with open("input_02.txt") as f:
-        data = [tuple(line.split()) for line in f.readlines()]
-    
+    data = [(line[0], line[-1]) for line in get_puzzle_input(2).split("\n")]
+
     points = 0
     for strat in data:
         points += evaluate_match(strat)

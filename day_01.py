@@ -1,8 +1,8 @@
+from aoc_utility import get_puzzle_input
 
 
 def main():
-    with open("input_01.txt") as f:
-        data = f.read()
+    data = get_puzzle_input(1)
     
     elfes = [sum([int(c) for c in cal.split()]) for cal in data.split("\n\n")]
     print(elfes)

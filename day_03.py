@@ -1,4 +1,5 @@
 import string
+from aoc_utility import get_puzzle_input
 
 
 PRIORITY = {
@@ -7,8 +8,7 @@ PRIORITY = {
 
 
 def main():
-    with open("input_03.txt") as f:
-        rucksacks = f.readlines()
+    rucksacks = get_puzzle_input(3).split("\n")
     
     prio_sum = 0
     for rucksack in rucksacks:
