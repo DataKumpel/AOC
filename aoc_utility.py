@@ -9,3 +9,4 @@ if __name__ == "__main__":
     # Testing first 3 puzzle inputs:
     for i in range(1, 4):
         print(get_puzzle_input(i))
+        
