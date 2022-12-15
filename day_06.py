@@ -8,24 +8,25 @@ def get_marker(data: str, offset=4):
             print(f"{marker=} {start=}")
             return marker, start
 
+
 def main():
     data = get_puzzle_input(6)
-    get_marker(data)
-    get_marker(data, 14)
+    get_marker(data)       # Part I
+    get_marker(data, 14)   # Part II
 
     
-
-
 if __name__ == "__main__":
+    # Tests:
     get_marker("bvwbjplbgvbhsrlpgdmjqwftvncz")
     get_marker("nppdvjthqldpwncqszvftbrmjlhg")
     get_marker("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg")
     get_marker("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw")
+
+    # Tests Part II:
     get_marker("mjqjpqmgbljsphdztnvjfqwrcgsmlb", 14)
     get_marker("bvwbjplbgvbhsrlpgdmjqwftvncz", 14)
     get_marker("nppdvjthqldpwncqszvftbrmjlhg", 14)
     get_marker("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg", 14)
     get_marker("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw", 14)
     main()
-
 
